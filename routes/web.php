@@ -82,5 +82,8 @@ Route::prefix('/reply')->name('reply.')->group(
 
         // Edit reply post
         Route::post('/edit/{id}', ['\App\Http\Controllers\ReplyController', 'editPost'])->middleware('auth');
+
+        // Delete reply
+        Route::post('/delete/{id}', ['\App\Http\Controllers\ReplyController', 'delete'])->middleware('auth');
     }
 );
